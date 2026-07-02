@@ -45,10 +45,3 @@ A string prompt template is defined to guide to the LLM. It instructs the model 
 The context, resume, and job description are passed to the `ChatDartmouth` API (running the Qwen 32B model) to generate the final artifact.
 
 *Note on Generated Output*: The sample cover letter displayed at the end of the notebook was generated using a test corpus of diverse project descriptions and historical cover letters. It is intended solely to demonstrate the RAG pipeline's ability to accurately retrieve, synthesize, and format context. The specific companies and roles listed in the output reflect this test dataset rather than my personal employment history.
-
-## Setup and Usage
-1. **Environment Setup:** Open the notebook in Google Colab.
-2. **Install Dependencies:** The first cell installs all required libraries.
-3. **Mount Drive:** Ensure your documents are located in Google Drive at `/content/drive/MyDrive/colab_rag-letters`.
-4. **API Keys:** You will need to add your Dartmouth API key to your Colab Secrets (`dartmouth_api_key`). Note: If adapting for standard OpenAI/Anthropic API, swap the `ChatDartmouth` module for `langchain_openai` or equivalent.
-5. **Execution:** Define the `job-desc` and `resume_text` strings in the final cell, then run `rag_answer()` to generate the cover letter.
